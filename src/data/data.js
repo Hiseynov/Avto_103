@@ -26,17 +26,6 @@ export const Cars = [
         ],
         marka:"BMW Х6",
         price:"70",
-        // price:[
-        //     {
-        //         title:"15000 руб."
-        //     },
-        //     {
-        //         title:"14000 руб."
-        //     },
-        //     {
-        //         title:"13000 руб."
-        //     }
-        // ],
         il:"2017",
         yanacag:"Benzin",
         mator:"5.5 L",

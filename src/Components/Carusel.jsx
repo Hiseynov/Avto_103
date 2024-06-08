@@ -46,7 +46,7 @@ function Carusel() {
                         </div>
                         <div className="Carusel__container--button">
                             <ul>
-                                <li><h3>50 манат</h3></li>
+                                <li><h3>50 ₼</h3></li>
                                 <li><strong>{t("sutka")}</strong></li>
                             </ul>
                             
@@ -69,7 +69,7 @@ function Carusel() {
                         </div>
                         <div className="Carusel__container--button">
                             <ul>
-                                <li><h3>50 манат</h3></li>
+                                <li><h3>50 ₼</h3></li>
                                 <li><strong>{t("sutka")}</strong></li>
                             </ul>
                             
@@ -79,52 +79,7 @@ function Carusel() {
                 </div>
             </div>
         </SwiperSlide>
-        {/* <SwiperSlide>
-            <div className="Carusel">
-                <div className="Carusel__container">
-                    <img src="https://rentcar72.ru/media/zoo/images/slide-lexus_94f2d3d68017845b97347e2b9bbd6438.jpg" alt="" />
-                    <div className="Carusel__container--word">
-                        <div className="Carusel__container--top">
-                            <ul>
-                                <li><strong>Арендовать автомобиль</strong></li>
-                                <li><h1>Mercedes-Benz E </h1></li>
-                            </ul>
-                        </div>
-                        <div className="Carusel__container--button">
-                            <ul>
-                                <li><h1>50 манат</h1></li>
-                                <li><strong>В сутки</strong></li>
-                            </ul>
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className="Carusel">
-                <div className="Carusel__container">
-                    <img src="https://rentcar72.ru/media/zoo/images/slide-lexus_94f2d3d68017845b97347e2b9bbd6438.jpg" alt="" />
-                    <div className="Carusel__container--word">
-                        <div className="Carusel__container--top">
-                            <ul>
-                                <li><strong>Арендовать автомобиль</strong></li>
-                                <li><h1>Mercedes-Benz E </h1></li>
-                            </ul>
-                        </div>
-                        <div className="Carusel__container--button">
-                            <ul>
-                                <li><h1>50 манат</h1></li>
-                                <li><strong>В сутки</strong></li>
-                            </ul>
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </SwiperSlide> */}
+        
 
       </Swiper>
     </div>
