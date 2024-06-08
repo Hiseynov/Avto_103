@@ -334,17 +334,15 @@ body {
     transform: translateY(0%);
   }
 }
-.Home__carusel {
   .swiper-button-next {
-    right: 10%;
-    top: 85%;
+    @include mobile(){
+      
+      right: 50px;
+    }
   }
   .swiper-button-prev {
-    left: auto;
-    right: 14%;
-    top: 85%;
+    left: 10px;
   }
-}
 .swiper-button-disabled {
   // transform: scale(0);
 }
@@ -591,7 +589,7 @@ body {
       border-radius: 6px;
       align-items: center;
       width: 90px;
-      padding: 20px 0px;
+      padding: 20px 8px;
       i{
         font-size: 30px;
       }

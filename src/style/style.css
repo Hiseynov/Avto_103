@@ -265,14 +265,14 @@ body {
     transform: translateY(0%);
   }
 }
-.Home__carusel .swiper-button-next {
-  right: 10%;
-  top: 85%;
+@media screen and (max-width: 768px) {
+  .swiper-button-next {
+    right: 50px;
+  }
 }
-.Home__carusel .swiper-button-prev {
-  left: auto;
-  right: 14%;
-  top: 85%;
+
+.swiper-button-prev {
+  left: 10px;
 }
 
 .swiper-button-next,
@@ -506,7 +506,7 @@ body {
   border-radius: 6px;
   align-items: center;
   width: 90px;
-  padding: 20px 0px;
+  padding: 20px 8px;
 }
 .CarsItem__categories--car li i {
   font-size: 30px;

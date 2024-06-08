@@ -13,7 +13,7 @@ export const Cars = [
         il:"2017",
         yanacag:"Benzin",
         mator:"5.5 L",
-        karobka:"Avto",
+        karobka:"Avtomaat",
         id:'1'
 
     },
@@ -29,7 +29,7 @@ export const Cars = [
         il:"2017",
         yanacag:"Benzin",
         mator:"5.5 L",
-        karobka:"Avto",
+        karobka:"Avtomaat",
         id:'2'
 
     },
@@ -43,7 +43,7 @@ export const Cars = [
         il:"2017",
         yanacag:"Benzin",
         mator:"5.5 L",
-        karobka:"Avto",
+        karobka:"Avtomaat",
         id:'3'
 
     },
@@ -56,7 +56,7 @@ export const Cars = [
         marka:"BMW X5 XDRIVE 40D",
         price:'90',
         mator:"5.5 L",
-        karobka:"Avto",
+        karobka:"Avtomaat",
         id:'4'
 
     },

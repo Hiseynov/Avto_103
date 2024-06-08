@@ -13,7 +13,7 @@ function ButonLink({marka}) {
                                     {t('zeng')}
                                 </strong>
                             </a>
-                            <a href={`https://api.whatsapp.com/send?phone=994509990103&text= Salam Avto 103! Sizə "${marka}" ilə əlaqədar müraciət edirəm.`} target='_blank' className="clickRight">
+                            <a href={`https://wa.me/994509990103`} target='_blank' className="clickRight">
                                <strong>
                                <i className='fa fa-whatsapp'></i>
                                 Whatsapp
