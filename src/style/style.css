@@ -497,6 +497,8 @@ body {
 .CarsItem__categories--car {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .CarsItem__categories--car li {
   display: flex;

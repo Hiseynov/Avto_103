@@ -581,6 +581,8 @@ body {
   &--car{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     li{
       display: flex;
       flex-direction: column;
