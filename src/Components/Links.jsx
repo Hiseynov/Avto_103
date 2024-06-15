@@ -27,7 +27,7 @@ function Links() {
                 </a>
             </div>
             <div className="Links__container--item Links__container--facebook">
-                <a href="https://www.facebook.com/profile.php?id=61560227264392" target='_blank'>
+                <a href="https://www.facebook.com/auto103" target='_blank'>
                     <i className='fa-brands fa-facebook-f'></i>
                 </a>
             </div>

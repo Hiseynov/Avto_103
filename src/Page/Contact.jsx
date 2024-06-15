@@ -113,7 +113,7 @@ function Contact() {
                     {t("facebook")}
                     </h5>
                     <div className="Contact_melumatlar">
-                      <strong>Rentacar "Avto103" </strong>
+                      <strong>Rentacar-avto103  </strong>
                     </div>
                   </div>
                 </li>
