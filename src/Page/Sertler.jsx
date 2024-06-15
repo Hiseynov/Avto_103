@@ -42,7 +42,7 @@ line25,line26} = t('Sert');
               <h1 className="divider">{t("SertlerArenda")} </h1>
             </div>
             <div
-              class="Sertler__container--word"
+              className="Sertler__container--word"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -89,7 +89,7 @@ line25,line26} = t('Sert');
                 {line11}
               </h5>
               <ul
-                class="Sertler__container--categories"
+                className="Sertler__container--categories"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -122,7 +122,7 @@ line25,line26} = t('Sert');
                 {line20}
               </h5>
               <ul
-                class="Sertler__container--categories"
+                className="Sertler__container--categories"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
