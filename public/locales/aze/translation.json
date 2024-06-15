@@ -59,5 +59,9 @@
   "city": "Şəhər",
   "cityes": "Bakı",
   "facebook": "Facebook hesabı: ",
-  "qiymet":"{{qiymet}} -dən"
+  "qiymet":"{{qiymet}} -dən",
+  "error": "Səhifə tapılmadı",
+  "back": "Avtomobillərə qayıdın",
+  "TitleError": "Səhifə tapılmadı - AVTO-103: Bakıda avtomobillərin icarəsi",
+"ContextError": "Üzr istəyirik, axtardığınız səhifə tapılmadı. AVTO-103 Bakıda avtomobillərin icarəsi üçün geniş bir çeşid təklif edir. Xidmətlərimizlə bağlı daha çox məlumat almaq üçün əsas səhifəmizi ziyarət edin."
 }

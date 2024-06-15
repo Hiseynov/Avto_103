@@ -59,5 +59,9 @@
   "city": "City of ",
   "cityes": "Baku",
   "facebook": "Facebook account: ",
-  "qiymet":"from {{qiymet}}"
+  "qiymet":"from {{qiymet}}",
+"error": "Page not found",
+"back": "Return to cars",
+"TitleError": "Page not found - AVTO-103: car rental in Baku",
+"ContextError": "Sorry, the page you are looking for cannot be found. AVTO-103 offers a wide range of cars for rent in Baku. Visit our homepage to learn more about our services."
 }

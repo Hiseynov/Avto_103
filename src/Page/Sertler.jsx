@@ -19,6 +19,12 @@ line25,line26} = t('Sert');
       <Helmet>
         <title>{t('TitleSert')}</title>
         <meta name="description" content={t("ContextSert")} />
+        <meta property="og:title" content={t('TitleSert')}/>
+        <meta property="og:description" content={t("ContextSert")}/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content={t('TitleSert')}/>
+        <meta name="twitter:description" content={t("ContextSert")}/>
         {/* Другие метатеги */}
       </Helmet>
       <section id="Sertler">

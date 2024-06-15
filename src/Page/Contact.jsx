@@ -10,6 +10,12 @@ function Contact() {
                               <Helmet>
         <title>{t('TitleContact')}</title>
         <meta name="description" content={t("ContextContact")} />
+        <meta property="og:title" content={t('TitleContact')}/>
+        <meta property="og:description" content={t("ContextContact")}/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content={t('TitleContact')}/>
+        <meta name="twitter:description" content={t("ContextContact")}/>
         {/* Другие метатеги */}
       </Helmet>
       <section id="Contact">

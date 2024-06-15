@@ -1659,3 +1659,50 @@ body {
   top: 0px;
   padding-bottom: 20px;
 }
+.Eror404{
+  margin: 50px 0;
+  // Eror404__container
+  &__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    // .Eror404__container--logo
+    &--logo{
+      h1{
+        // width: 300px;
+        height: 300px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &--word{
+      h3{
+        font-size: 50px;
+        @include mobile(){
+          font-size: 35px;
+        }
+      }
+    }
+    &--link{
+      width: 200px;
+      height: 40px;
+      background-color: $firs-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding: 5px;
+      transition: .5s;
+      &:hover{
+        background-color: rgb(185, 67, 67);
+      }
+      span{
+        color: white;
+      }
+    }
+  }
+}

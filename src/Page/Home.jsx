@@ -1,64 +1,85 @@
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import Arenda from "../Components/Arenda";
 import Carusel from "../Components/Carusel";
-import { Cars } from "../data/data";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import ButonLink from "../Components/ButonLink";
 import { Trans, useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Scorost from "../img/Scorost.webp";
-function Home() {
+import { Cars } from "../data/data";
+// import mockCars from '../mockData'; // Импортируем моковые данные
+
+export default function Home({ initialCars = Cars }) { // Используем моковые данные по умолчанию
+  const [cars, setCars] = useState(initialCars);
+  const [error, setError] = useState(null);
   const [popopArenda, setPopopArenda] = useState(true);
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
+  useEffect(() => {
+    if (!initialCars) {
+      axios.get('http://localhost:8000/api/v1/posts/')
+        .then(response => {
+          setCars(response.data);
+        })
+        .catch(error => {
+          setError(error);
+          console.error('Произошла ошибка при выполнении запроса!', error);
+        });
+    }
+  }, [initialCars]);
+
   const { t } = useTranslation();
   const { line1, line2, line3 } = t("About");
+
+  if (error) {
+    return <div>Ошибка при загрузке данных.</div>;
+  }
+
   return (
     <>
       <Helmet>
         <title>{t("TitleHome")}</title>
         <meta name="description" content={t("ContextHome")} />
-        {/* Другие метатеги */}
+        <meta property="og:title" content={t("TitleHome")}/>
+        <meta property="og:description" content={t("ContextHome")}/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content={t("TitleHome")}/>
+        <meta name="twitter:description" content={t("ContextHome")}/>
       </Helmet>
       <div
         onClick={() => setPopopArenda(!popopArenda)}
         className={popopArenda ? "ofervlow " : "ofervlow hidden"}
       ></div>
-      <Carusel></Carusel>
+      <Carusel />
       <section id="ProkatWord">
-        <div className="ProkatWord">
+        <article className="ProkatWord">
           <div className="ProkatWord__container">
             <h1 data-aos="fade-up">
               <Trans
                 i18nKey={line1}
-                values={{
-                  Kampaniya: "AVTO - 103 Rent a car Baku",
-                }}
-                components={{
-                  1: <strong />,
-                }}
+                values={{ Kampaniya: "AVTO - 103 Rent a car Baku" }}
+                components={{ 1: <strong /> }}
               />
             </h1>
             <div className="ProkatWord__container--word">
-              {/* <h3 data-aos="fade-up">Мы очень рады приветствовать Вас на нашей официальной страницы <strong>" AVTO - 103 "</strong> <strong>"Rent a car Baku".</strong></h3> */}
               <p data-aos="fade-up">{line2}</p>
               <h4 data-aos="fade-up">{line3}</h4>
             </div>
-
-            {/* <p>Предлагаем <strong>аренду</strong> и <strong>прокат</strong> автомобилей в Баку. Арендовать автомобиль стало проще с компанией <strong>Avto 103</strong> .
-                  Подберем индивидуальный тариф по выгодным ценам. Доставим автомобиль в любую точку города, в том числе в аэропорт.</p> */}
           </div>
-        </div>
+        </article>
       </section>
       <section id="Cars">
         <div className="Cars">
           <div className="Cars__container">
-            {Cars.map((item) => (
+          {cars.map((item) => (
               <div
                 key={item.id}
                 className="Cars__container--item"
@@ -118,11 +139,17 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* <div className={popopArenda?'popopArenda':"popopArenda hidden"}>
-                <Arenda setPopopArenda={setPopopArenda}></Arenda>
-            </div> */}
     </>
   );
 }
 
-export default Home;
+// Функция для серверного получения данных
+export async function getServerSideProps() {
+  try {
+    const response = await axios.get('http://localhost:8000/api/v1/posts/');
+    return { props: { initialCars: response.data } };
+  } catch (error) {
+    console.error('Ошибка при получении данных:', error);
+    return { props: { initialCars: null } };
+  }
+}

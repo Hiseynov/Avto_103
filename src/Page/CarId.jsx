@@ -18,14 +18,24 @@ import ButonLink from "../Components/ButonLink";
 import { Trans, useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import Scorost from "../img/Scorost.webp";
+import axios from "axios";
 function CarId() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const { id } = useParams();
   const [dataItem, setDataItem] = useState([]);
   const navigate = useNavigate();
+  // useEffect(() => {
+  //   setDataItem(Cars.filter((item) => item.id == id));
+  // }, []);
   useEffect(() => {
-    setDataItem(Cars.filter((item) => item.id == id));
-  }, []);
+    axios.get(`http://localhost:8000/api/v1/posts/${id}`)
+      .then(e => {
+        setDataItem(e.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, [id]);
   if (dataItem.length == 0) {
     navigate("/no found");
   }
@@ -35,6 +45,12 @@ function CarId() {
             <Helmet>
         <title>{t('TitleHome')}</title>
         <meta name="description" content={t("ContextHome")} />
+        <meta property="og:title" content={t('TitleHome')}/>
+        <meta property="og:description" content={t("ContextHome")}/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content={t('TitleHome')}/>
+        <meta name="twitter:description" content={t("ContextHome")}/>
         {/* Другие метатеги */}
       </Helmet>
       <section id="CarsItem">
