@@ -13,7 +13,7 @@
   "footerWord": "Car rental in Baku from the company <1>{{Kampaniya}}</1>",
   "Sert": {
     "line1": "Required Documents",
-    "line2": "Required documents for car rental: <2>{{passport}}</2>",
+    "line2": "Required documents for car rental: <2>passport, driver's license.</2>",
     "line3": "Age and Experience",
     "line4": "The car can be driven by the driver with whom the contract is signed. Age requirement is 22 years old, with a driving experience of at least 2 years.",
     "line5": "Return",

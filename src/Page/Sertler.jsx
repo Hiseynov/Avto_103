@@ -53,9 +53,9 @@ line25,line26} = t('Sert');
               <p data-aos="fade-up" data-aos-delay="100">
                 <Trans
                   i18nKey={line2}
-                  values={{
-                    pasport: "паспорт, водительское удостоверение.",
-                  }}
+                  // values={{
+                  //   pasport: "паспорт, водительское удостоверение.",
+                  // }}
                   components={{
                     2: <b />,
                   }}
