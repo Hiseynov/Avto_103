@@ -19,7 +19,7 @@ function Footer() {
                 <Trans
                   i18nKey={t("footerWord")}
                   values={{
-                    Kampaniya: "AVTO - 103 Rent a car Baku",
+                    Kampaniya: "AVTO-103",
                   }}
                   components={{
                     1: <strong />,
@@ -37,7 +37,7 @@ function Footer() {
                 <Link to={"/"}>{t("Avtomobil")}</Link>
               </li>
               <li>
-                <Link to={"/Sert"}>{t("Sertler")}</Link>
+                <Link to={"/Şərtlər"}>{t("Sertler")}</Link>
               </li>
               <li>
                 <Link to={"/Contact"}>{t("elage")}</Link>

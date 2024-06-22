@@ -43,14 +43,14 @@ line25,line26} = t('Sert');
             </div>
             <div
               className="Sertler__container--word"
-              data-aos="fade-up"
-              data-aos-delay="100"
+              
+             
             >
-              <h4 data-aos="fade-up" data-aos-delay="100">
+              <h4 >
                 {line1}
               </h4>
 
-              <p data-aos="fade-up" data-aos-delay="100">
+              <p >
                 <Trans
                   i18nKey={line2}
                   // values={{
@@ -61,90 +61,90 @@ line25,line26} = t('Sert');
                   }}
                 />
               </p>
-              <h4 data-aos="fade-up" data-aos-delay="100">
+              <h4 >
                 {line3}
               </h4>
-              <p data-aos="fade-up" data-aos-delay="100">
+              <p >
                 {line4}
               </p>
-              <h4 data-aos="fade-up" data-aos-delay="100">
+              {/* <h4 >
                 {line5}
               </h4>
-              <p data-aos="fade-up" data-aos-delay="100">
+              <p >
                {line6}
-              </p>
-              <h4 data-aos="fade-up" data-aos-delay="100">
+              </p> */}
+              <h4 >
                 {line7}
               </h4>
-              <p data-aos="fade-up" data-aos-delay="100">
+              <p >
                {line8}
               </p>
-              <h4 data-aos="fade-up" data-aos-delay="100">
+              <h4 >
                 {line9}
               </h4>
-              <p data-aos="fade-up" data-aos-delay="100">
+              <p >
                {line10}
               </p>
-              <h5 data-aos="fade-up" data-aos-delay="100">
+              <h5 >
                 {line11}
               </h5>
               <ul
                 className="Sertler__container--categories"
-                data-aos="fade-up"
-                data-aos-delay="100"
+                
+               
               >
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line12}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line13}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                  {line14}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line15}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line16}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line17}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line18}
                 </li>
               </ul>
-              <h4 data-aos="fade-up" data-aos-delay="100">
+              {/* <h4 >
                 {line19}
               </h4>
-              <h5 data-aos="fade-up" data-aos-delay="100">
+              <h5 >
                 {line20}
               </h5>
               <ul
                 className="Sertler__container--categories"
-                data-aos="fade-up"
-                data-aos-delay="100"
+                
+               
               >
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line21}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line22}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                  {line23}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                  {line24}
                 </li>
-                <li data-aos="fade-up" data-aos-delay="100">
+                <li >
                   {line25}
                 </li>
               </ul>
-              <p data-aos="fade-up" data-aos-delay="100">
+              <p >
               {line26}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

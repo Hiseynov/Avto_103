@@ -103,7 +103,7 @@ function Header() {
                   <Link to={"/"}>{t("Avtomobil")}</Link>
                 </li>
                 <li>
-                  <Link to={"/Sert"}>{t("Sertler")}</Link>
+                  <Link to={"/Şərtlər"}>{t("Sertler")}</Link>
                 </li>
                 <li>
                   <Link to={"/Contact"}>{t("elage")}</Link>
@@ -169,7 +169,7 @@ function Header() {
                 <Link to={"/"}>{t("Avtomobil")}</Link>
               </li>
               <li>
-                <Link to={"/Sert"}>{t("Sertler")}</Link>
+                <Link to={"/Şərtlər"}>{t("Sertler")}</Link>
               </li>
               <li>
                 <Link to={"/Contact"}>{t("elage")}</Link>

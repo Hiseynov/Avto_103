@@ -1,20 +1,22 @@
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import Arenda from "../Components/Arenda";
+// import Arenda from "../Components/Arenda";
 import Carusel from "../Components/Carusel";
 import ButonLink from "../Components/ButonLink";
 import { Trans, useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Scorost from "../img/Scorost.webp";
-import { Cars } from "../data/data";
+import engine from "../img/engine.png";
+import benzin from "../img/benzin.png";
+import calendar from "../img/calendar.png";
+// import { Cars } from "../data/data";
 // import mockCars from '../mockData'; // Импортируем моковые данные
 
-export default function Home({ initialCars = Cars }) { // Используем моковые данные по умолчанию
-  const [cars, setCars] = useState(initialCars);
+export default function Home({ initialCars }) { // Используем моковые данные по умолчанию
+  const [cars, setCars] = useState(initialCars || []);
   const [error, setError] = useState(null);
   const [popopArenda, setPopopArenda] = useState(true);
 
@@ -24,9 +26,10 @@ export default function Home({ initialCars = Cars }) { // Используем �
 
   useEffect(() => {
     if (!initialCars) {
-      axios.get('http://localhost:8000/api/v1/posts/')
+      axios.get('https://api.avto-103.com/api/v1/posts/')
         .then(response => {
           setCars(response.data);
+          console.log(response.data);
         })
         .catch(error => {
           setError(error);
@@ -35,12 +38,10 @@ export default function Home({ initialCars = Cars }) { // Используем �
     }
   }, [initialCars]);
 
+  const apiUrl = 'https://api.avto-103.com/api/v1/posts/'
   const { t } = useTranslation();
-  const { line1, line2, line3 } = t("About");
+  const { line1, line2 } = t("About", { returnObjects: true });
 
-  if (error) {
-    return <div>Ошибка при загрузке данных.</div>;
-  }
 
   return (
     <>
@@ -65,13 +66,12 @@ export default function Home({ initialCars = Cars }) { // Используем �
             <h1 data-aos="fade-up">
               <Trans
                 i18nKey={line1}
-                values={{ Kampaniya: "AVTO - 103 Rent a car Baku" }}
+                values={{ Kampaniya: "AVTO-103 Rent a car" }}
                 components={{ 1: <strong /> }}
               />
             </h1>
             <div className="ProkatWord__container--word">
               <p data-aos="fade-up">{line2}</p>
-              <h4 data-aos="fade-up">{line3}</h4>
             </div>
           </div>
         </article>
@@ -79,22 +79,22 @@ export default function Home({ initialCars = Cars }) { // Используем �
       <section id="Cars">
         <div className="Cars">
           <div className="Cars__container">
-          {cars.map((item) => (
+            {cars && cars.map((item) => (
               <div
                 key={item.id}
                 className="Cars__container--item"
                 data-aos="fade-up"
                 data-aos-delay="1000"
               >
-                <Link to={`Car/${item.id}`}>
+                <Link to={`/Car/${item.id}`}>
                   <div className="CarsItem__top">
-                    <img src={item.photo[0].url} alt="" />
+                    <img src={item.image_1} alt="Главное фотография машины" />
                   </div>
                 </Link>
                 <div className="CarsItem__button">
                   <div className="CarsItem__button--word">
                     <h3>
-                      {item.marka}{" "}
+                      {item.car}{" "}
                       <strong>
                         <Trans
                           i18nKey={t("qiymet")}
@@ -106,33 +106,33 @@ export default function Home({ initialCars = Cars }) { // Используем �
                     </h3>
                     
                     <ul>
-                      {item.il && (
+                      {item.year && (
                         <li>
-                          <i className="fa-solid fa-calendar-days"></i>
-                          <span>{item.il}</span>
+                         <img src={calendar} alt="икон календаря" />
+                          <span>{item.year}</span>
                         </li>
                       )}
-                      {item.yanacag && (
+                      {item.fuel && (
                         <li>
-                          <i className="fa-solid fa-gas-pump"></i>{" "}
-                          <span>{item.yanacag}</span>
+                          <img src={benzin} alt="икон бензобака" />
+                          <span>{item.fuel}</span>
                         </li>
                       )}
-                      {item.mator && (
+                      {item.engine_volume && (
                         <li>
-                          <i className="fa-solid fa-gauge"></i>{" "}
-                          <span>{item.mator}</span>
+                          <img src={engine} alt="икон мотора" />
+                          <span>{item.engine_volume} L</span>
                         </li>
                       )}
-                      {item.karobka && (
+                      {item.transmission && (
                         <li>
-                          <img src={Scorost} alt="" />
-                          <span>{item.karobka}</span>
+                          <img src={Scorost} alt="икон скорости машины" />
+                          <span>{item.transmission}</span>
                         </li>
                       )}
                     </ul>
                   </div>
-                  <ButonLink marka={item.marka}></ButonLink>
+                  <ButonLink ></ButonLink>
                 </div>
               </div>
             ))}
@@ -143,10 +143,10 @@ export default function Home({ initialCars = Cars }) { // Используем �
   );
 }
 
-// Функция для серверного получения данных
+// Функция для серверного получения данных (для Next.js)
 export async function getServerSideProps() {
   try {
-    const response = await axios.get('http://localhost:8000/api/v1/posts/');
+    const response = await axios.get(apiUrl);
     return { props: { initialCars: response.data } };
   } catch (error) {
     console.error('Ошибка при получении данных:', error);

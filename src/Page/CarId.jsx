@@ -18,27 +18,29 @@ import ButonLink from "../Components/ButonLink";
 import { Trans, useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import Scorost from "../img/Scorost.webp";
+import engine from "../img/engine.png";
+import benzin from "../img/benzin.png";
+import calendar from "../img/calendar.png";
 import axios from "axios";
 function CarId() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const { id } = useParams();
   const [dataItem, setDataItem] = useState([]);
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   setDataItem(Cars.filter((item) => item.id == id));
-  // }, []);
+  const [list,setList] = useState([])
+
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/v1/posts/${id}`)
+    axios.get(`https://api.avto-103.com/api/v1/posts/${id}/`)
       .then(e => {
         setDataItem(e.data);
+        console.log(e.data);
       })
       .catch(error => {
+        navigate("/no found");
         console.log(error);
       });
   }, [id]);
-  if (dataItem.length == 0) {
-    navigate("/no found");
-  }
+
   const { t } = useTranslation();
   return (
     <>
@@ -54,7 +56,7 @@ function CarId() {
         {/* Другие метатеги */}
       </Helmet>
       <section id="CarsItem">
-        {dataItem.map((item) => (
+        {/* {dataItem && dataItem.map((item) => ( */}
           <>
             <div className="CardItemTop">
               <div className="CardItemTop__container">
@@ -62,7 +64,7 @@ function CarId() {
                   <strong>
                     <Link to={"/"}>{t("Avtomobil")} </Link>
                   </strong>{" "}
-                  / <span>{item.marka}</span>
+                  / <span>{dataItem.car}</span>
                 </p>
               </div>
             </div>
@@ -71,7 +73,7 @@ function CarId() {
                 <Trans
                   i18nKey={t("arenda")}
                   values={{
-                    avto: item.marka,
+                    avto: dataItem.car,
                   }}
                 />
               </h3>
@@ -89,12 +91,97 @@ function CarId() {
                   modules={[FreeMode, Navigation, Thumbs]}
                   className="mySwiper2"
                 >
-                  {item.photo.map((i) => (
-                    <SwiperSlide>
-                      <img src={i.url} />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+        {
+                    dataItem.image_1 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_1} alt='Детальное фотография машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_2 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_2} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_3 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_3} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_4 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_4} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_5 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_5} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_6 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_6} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_7 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_7} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_8 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_8} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_9 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_9} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_10 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_10} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                 </Swiper>
                 <Swiper
                   onSwiper={setThumbsSwiper}
                   spaceBetween={10}
@@ -104,11 +191,96 @@ function CarId() {
                   modules={[FreeMode, Navigation, Thumbs]}
                   className="mySwiperr"
                 >
-                  {item.photo.map((i) => (
-                    <SwiperSlide>
-                      <img src={i.url} />
-                    </SwiperSlide>
-                  ))}
+                  {
+                    dataItem.image_1 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_1} alt='Детальное фотография машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_2 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_2} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_3 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_3} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_4 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_4} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_5 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_5} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_6 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_6} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_7 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_7} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_8 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_8} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_9 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_9} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
+                  {
+                    dataItem.image_10 && (
+                      <SwiperSlide> 
+                        <img src={dataItem.image_10} alt='Детальное фотогравия машины' />
+                        </SwiperSlide>
+
+                     
+                    )
+                  }
                 </Swiper>
               </div>
               <aside className="CarsItem__word">
@@ -121,7 +293,7 @@ function CarId() {
                         <Trans
                           i18nKey={t("qiymet")}
                           values={{
-                            qiymet: `${item.price} ₼`,
+                            qiymet: `${dataItem.price} ₼`,
                           }}
                         />
                         </strong>
@@ -136,39 +308,40 @@ function CarId() {
                       </li> */}
                     </ul>
                     <ul className="CarsItem__categories--car">
-                      {item.il && (
+                    {dataItem.year && (
                         <li>
-                          <i className="fa-solid fa-calendar-days"></i>
-                          <span>{item.il}</span>
+                         <img src={calendar} alt="икон календаря" />
+                          <span>{dataItem.year}</span>
                         </li>
                       )}
-                      {item.yanacag && (
+                      {dataItem.fuel && (
                         <li>
-                          <i className="fa-solid fa-gas-pump"></i>{" "}
-                          <span>{item.yanacag}</span>
+                          <img src={benzin} alt="икон бензобака" />
+                          <span>{dataItem.fuel}</span>
                         </li>
                       )}
-                      {item.mator && (
+                      {dataItem.engine_volume && (
                         <li>
-                          <i className="fa-solid fa-gauge"></i>{" "}
-                          <span>{item.mator}</span>
+                          <img src={engine} alt="икон мотора" />
+                          <span>{dataItem.engine_volume} L</span>
                         </li>
                       )}
-                      {item.karobka && (
+                      {dataItem.transmission && (
                         <li>
-                          <img src={Scorost} alt="" />
-                          <span>{item.karobka}</span>
+                          <img src={Scorost} alt="икон скорости машины" />
+                          <span>{dataItem.transmission}</span>
                         </li>
                       )}
                     </ul>
+
                   </div>
                   {/* <Arenda></Arenda> */}
-                  <ButonLink marka={item.marka}></ButonLink>
+                  <ButonLink></ButonLink>
                 </div>
               </aside>
             </div>
           </>
-        ))}
+        {/* ))} */}
       </section>
     </>
   );

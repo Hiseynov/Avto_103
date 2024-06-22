@@ -5,42 +5,37 @@
   "sifaris": "ORDER A CAR:",
   "icareye": "Rent a car",
   "sutka": "Per day",
+  
+
+
+
+
+  
   "About": {
-    "line1": "We are very pleased to welcome you to our official page {{Kampaniya}}.",
-    "line2": "We are delighted to offer you a wide range of car rentals of all classes, meeting your needs and budget. Car rental in Baku allows you to choose your route independently. Along with 24/7 service, we guarantee the most attractive prices and high-quality cars compared to similar offers from other companies in the local market. With a minimum of 2 years of driving experience, renting a car in Baku through our company becomes even easier and more beneficial for you.",
-    "line3": "We will deliver the car and complete the paperwork near you!"
+    "line1": "We are very glad to welcome you on our official page <1>{{Kampaniya}}</1> !",
+    "line2": "We are glad to offer you wide choice of rental cars of all classes that meet your needs and budget. Car rental in Baku allows you to choose the route you need. Along with 24-hours service we guarantee the most attractive prices and the highest quality cars among all the other analogical local companies. Having a driving experience of at least two years, by means of our company, renting car in Baku becomes even easier and more profitable for you. You just need to call! We will deliver the car and register the documents at your place!"
   },
   "footerWord": "Car rental in Baku from the company <1>{{Kampaniya}}</1>",
   "Sert": {
-    "line1": "Required Documents",
-    "line2": "Required documents for car rental: <2>passport, driver's license.</2>",
-    "line3": "Age and Experience",
-    "line4": "The car can be driven by the driver with whom the contract is signed. Age requirement is 22 years old, with a driving experience of at least 2 years.",
-    "line5": "Return",
-    "line6": "The car must be returned clean and with the same amount of fuel as when you received it.",
+    "line1": "Required documents",
+    "line2": "Required documents for car rental: <2>identity card and driver's license.</2>",
+    "line3": "Age and experience",
+    "line4": "Age from 22 years, driving experience from 2 years.",
     "line7": "Territory",
-    "line8": "Car rental is within Baku. Travel outside the city or to other cities in Azerbaijan is only allowed after agreement with the company.",
-    "line9": "Renter's Responsibility",
-    "line10": "All our cars are insured. Renters can avoid problems if all rental conditions and rules are followed.",
-    "line11": "Actions to Avoid Problems and Have a Positive Car Rental Experience:",
-    "line12": "Always leave the rental car locked and alarmed;",
-    "line13": "Do not leave documents or keys in the car;",
-    "line14": "Observe speed limits and traffic rules, always wear seat belts;",
-    "line15": "Handle the rented car with care;",
+    "line8": "Car rental within Baku. Leaving the city and traveling to other cities of Azerbaijan only after agreement with the company",
+    "line9": "Renter's responsibility",
+    "line10": "All cars are insured. If all contract conditions are met, the renter will not bear additional responsibility",
+    "line11": "Actions that will help you avoid problems and troubles:",
+    "line12": "Always leave the rental car locked with the alarm on;",
+    "line13": "Do not leave documents and keys in the car;",
+    "line14": "Observe the speed limit and traffic rules, always wear a seatbelt;",
+    "line15": "Treat the rental car with care;",
     "line16": "Do not drive under the influence of alcohol or drugs;",
-    "line17": "Do not allow third parties not mentioned in the contract to drive the car (Additional driver for the car costs 5 manat);",
-    "line18": "In case of an accident or theft, immediately contact the Lessor and fulfill all necessary conditions for incident reporting.",
-    "line19": "Terms for Legal Entities",
-    "line20": "Required Documents:",
-    "line21": "Company card;",
-    "line22": "Copy of the statutory documents;",
-    "line23": "Passport and driver's license of the employee authorized to drive, with age requirement of 22 years old and driving experience of at least 2 years;",
-    "line24": "Power of attorney from the organization to sign the rental agreement and the vehicle handover-receipt act and relevant documents or seal;",
-    "line25": "Mobile phone.",
-    "line26": "All potential clients undergo security checks, and the company reserves the right to refuse to enter into a contract with a potential client."
-  },
+    "line17": "Do not hand over the car to third parties not specified in the contract.",
+    "line18": "In case of a traffic accident, immediately report to the law enforcement authorities and contact the Lessor."
+},
   "SertlerArenda": "Rental Terms",
-  "ContacWord": "Have <3>questions</3>? Feel free to <3>contact</3> us.",
+  "ContacWord": "For all your inquiries, you can write and call us.",
   "instagram": "Instagram account:",
   "mail": "Email address:",
   "phone": "Phone numbers:",
@@ -50,11 +45,11 @@
   "1Gun": "Price for 1 day",
   "1Hefte": "Price from 1 week",
   "1Ay": "Price from 1 month",
-  "TitleHome": "Car Rental in Baku | AVTO - 103 Rent a car Baku",
-  "ContextHome": "Welcome to the official website of AVTO - 103 Rent a car Baku. We offer a wide range of cars for rent at attractive prices and with high-quality service. Make your journey in Baku even more comfortable with our car rental.",
-  "TitleSert": "Car Rental Terms in Baku | AVTO - 103 Rent a car Baku",
-  "ContextSert": "Learn about our car rental terms in Baku. We offer a wide selection of cars, competitive prices, and convenient service. Make your journey in Baku even more enjoyable with AVTO - 103 Rent a car Baku.",
-  "TitleContact": "Contact AVTO - 103 | Rent a car Baku",
+  "TitleHome": "Car Rental in Baku | AVTO-103 Rent a car Baku",
+  "ContextHome": "Welcome to the official website of AVTO-103 Rent a car Baku. We offer a wide range of cars for rent at attractive prices and with high-quality service. Make your journey in Baku even more comfortable with our car rental.",
+  "TitleSert": "Car Rental Terms in Baku | AVTO-103 Rent a car Baku",
+  "ContextSert": "Learn about our car rental terms in Baku. We offer a wide selection of cars, competitive prices, and convenient service. Make your journey in Baku even more enjoyable with AVTO-103 Rent a car Baku.",
+  "TitleContact": "Contact AVTO-103 | Rent a car Baku",
   "ContextContact": "Contact us for car rental in Baku. We are ready to deliver the car and complete the paperwork near you. Let us make your journey in Baku even more convenient and enjoyable.",
   "city": "City of ",
   "cityes": "Baku",
@@ -63,5 +58,7 @@
 "error": "Page not found",
 "back": "Return to cars",
 "TitleError": "Page not found - AVTO-103: car rental in Baku",
-"ContextError": "Sorry, the page you are looking for cannot be found. AVTO-103 offers a wide range of cars for rent in Baku. Visit our homepage to learn more about our services."
+"ContextError": "Sorry, the page you are looking for cannot be found. AVTO-103 offers a wide range of cars for rent in Baku. Visit our homepage to learn more about our services.",
+"caruselLogo":"<3>{{avto_103}} </3> your reliable partner for travels in Azerbaijan",
+"Toyotaicare":"Travel around Azerbaijan in a {{toyotamarka}} "
 }

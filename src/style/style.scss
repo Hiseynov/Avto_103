@@ -245,6 +245,7 @@ body {
 }
 
 .Carusel {
+  // height: 100%;
   cursor: grab;
   &:active {
     cursor: grabbing;
@@ -253,6 +254,37 @@ body {
   &__container {
     position: relative;
     img {
+      object-fit: cover;
+    }
+    // Carusel__container--logo
+    &--logo{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+       
+      h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      font-size: 40px;
+        height: 50%;
+        width: 95%;
+        margin: 0 auto;
+        @include mobile(){
+          font-size: 16px !important;
+        }
+        @include ipad(){
+          font-size: 25px;
+        }
+        strong{
+          color: white;
+          display: contents;
+          font-weight: 800;
+        }
+      }
     }
     // .Carusel__container--word
     &--word {
@@ -265,7 +297,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      height: 100%;
+      // height: 100%;
       @include mobile() {
         padding-top: 0;
       }
@@ -283,14 +315,14 @@ body {
       ul {
         width: 84%;
         h3 {
-          font-size: 50px;
+          font-size: 28px;
           @include mobile() {
-            font-size: 20px;
+            font-size: 16px;
           }
         }
         strong {
-          font-size: 15px;
-          opacity: 0.8;
+          font-size: 18px;
+          opacity: 1;
           @include mobile() {
             font-size: 14px;
           }
@@ -309,8 +341,8 @@ body {
           }
         }
         strong {
-          opacity: 0.8;
-          font-size: 15px;
+          opacity: 1;
+          font-size: 18px;
 
           @include mobile() {
             font-size: 14px;
@@ -320,8 +352,11 @@ body {
     }
   }
 }
+.colorCarusel{
+  color: #000000;
+}
 .swiper-slide-active {
-  ul {
+  ul,h1{
     opacity: 0;
     transform: translateY(100%);
     animation: slide-up 2s ease forwards;
@@ -335,10 +370,10 @@ body {
   }
 }
   .swiper-button-next {
-    @include mobile(){
+    // @include mobile(){
       
-      right: 50px;
-    }
+    //   right: 50px;
+    // }
   }
   .swiper-button-prev {
     left: 10px;
@@ -389,13 +424,15 @@ body {
       flex-direction: column;
       row-gap: 5px;
       h1 {
-        width: 95%;
         font-size: 30px;
         margin-bottom: 30px;
 
         color: #302d2d;
         @include mobile() {
           font-size: 19px;
+        }
+        strong{
+          color: $firs-color;
         }
       }
       // .ProkatWord__container--word
@@ -445,6 +482,7 @@ body {
           img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
           }
         }
 
@@ -508,7 +546,6 @@ body {
   a {
     display: flex;
     width: 100%;
-    height: 100%;
     min-height: 45px;
     max-height: 45px;
     justify-content: center;
@@ -643,17 +680,21 @@ body {
   height: 100%;
   // object-fit: cover;
 }
-
+.Home__carusel{
+  .swiper-slide{
+    height: auto !important;
+  }
+}
 /* Стили для главного Swiper */
 .mySwiper2 {
-  height: 300px; /* Фиксированная высота главного Swiper */
+  height: 400px; /* Фиксированная высота главного Swiper */
   margin-left: auto;
   margin-right: auto;
 }
 
 /* Стили для миниатюрного Swiper */
 .mySwiperr {
-  height: 100px; /* Фиксированная высота миниатюрного Swiper */
+  height: 120px; /* Фиксированная высота миниатюрного Swiper */
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -673,6 +714,9 @@ body {
 #CarsItem {
   width: 90%;
   margin: 0 auto;
+  @include mobile(){
+    width: 95%;
+  }
   .CarsItem {
     display: flex;
     gap: 50px;
@@ -681,18 +725,21 @@ body {
       flex-direction: column;
       row-gap: 20px;
     }
-    @include ipad() {
-      flex-direction: column;
-      row-gap: 20px;
-    }
+    // @include ipad() {
+    //   flex-direction: column;
+    //   row-gap: 20px;
+    // }
     // .CarsItem__Carusel
     &__Carusel {
       width: 50%;
       @include mobile() {
         width: 100%;
       }
-      @include ipad() {
-        width: 100%;
+      // @include ipad() {
+      //   width: 100%;
+      // }
+      img{
+        object-fit: cover;
       }
     }
     // CarsItem__word
@@ -1110,6 +1157,9 @@ body {
   font-size: 30px;
   display: flex;
   align-items: center;
+  @include mobile(){
+    font-size: 22px !important;
+  }
 }
 
 .divider::before,
@@ -1190,8 +1240,10 @@ body {
   align-items: center;
   margin-top: 20px;
   column-gap: 50px;
+
   @include mobile(){
     grid-template-columns: 1fr;
+    row-gap: 20px;
   }
   ul{
     li{
@@ -1207,25 +1259,25 @@ body {
 
     // Footer__center
     &__center {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
       height: 100%;
-      padding: 20px 0 ;
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
-      // ul {
-      //   li {
-      //     a {
-      //       color: rgb(172, 163, 163);
-      //     }
-      //   }
-      // }
+      @include mobile(){
+        height: max-content !important;
+      }
     }
 
     // Footer__right
 
     &__right {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
       height: 100%;
-      padding: 20px 0;
+      @include mobile(){
+        height: max-content !important;
+      }
       // ul {
       //   li {
       //     span,
@@ -1252,7 +1304,6 @@ body {
     }
     h3 {
       color: white;
-      margin-bottom: 20px;
       font-size: 25px;
     }
   }
@@ -1660,9 +1711,11 @@ body {
   padding-bottom: 20px;
 }
 .Eror404{
-  margin: 50px 0;
+  width: 85%;
+  margin: 0 auto;
   // Eror404__container
   &__container{
+    margin: 50px 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1672,7 +1725,7 @@ body {
     &--logo{
       h1{
         // width: 300px;
-        height: 300px;
+        height: 250px;
         transition: .6s;
         animation: infinityEror .7s ease infinite;
         img{
@@ -1693,7 +1746,10 @@ body {
       h3{
         font-size: 50px;
         @include mobile(){
-          font-size: 35px;
+          font-size: 22px !important;
+        }
+        @include ipad(){
+          font-size: 30px;
         }
       }
     }

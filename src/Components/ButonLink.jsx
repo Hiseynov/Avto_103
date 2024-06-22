@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 
-function ButonLink({marka}) {
+function ButonLink() {
   const { t } = useTranslation();
   return (
     <>

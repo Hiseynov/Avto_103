@@ -15,7 +15,7 @@ export const routes = [
       element: <Home></Home>,
     },
     {
-      path: "Sert",
+      path: "Şərtlər",
       element: <Sertler></Sertler>,
     },
     {

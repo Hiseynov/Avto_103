@@ -25,12 +25,7 @@ function Contact() {
               <ul>
                 <li>
                   <h3>
-                    <Trans
-                      i18nKey={t("ContacWord")}
-                      components={{
-                        3: <span />,
-                      }}
-                    />
+                      {t("ContacWord")}
                   </h3>
                 </li>
               </ul>
